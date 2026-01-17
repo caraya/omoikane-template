@@ -6,7 +6,8 @@ const meta = {
   component: Button,
   tags: ['autodocs'],
   argTypes: {
-    variant: { control: 'select', options: ['primary', 'secondary'] },
+    variant: { control: 'select', options: ['primary', 'secondary', 'tertiary', 'destructive'] },
+    size: { control: 'select', options: ['sm', 'md', 'lg'] },
   },
 } satisfies Meta<typeof Button>;
 
@@ -26,3 +27,18 @@ export const Secondary: Story = {
     variant: 'secondary',
   },
 };
+
+export const Tertiary: Story = {
+  args: {
+    children: 'Tertiary Button',
+    variant: 'tertiary',
+  },
+};
+
+export const Destructive: Story = {
+  args: {
+    children: 'Delete Item',
+    variant: 'destructive',
+  },
+};
+
